@@ -1,0 +1,78 @@
+/* Navbar.css */
+
+/* General styles for the navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3d20ce;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 5px rgba(62, 4, 222, 0.1);
+  }
+  
+  /* Logo section */
+  .navbar-logo img {
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .navbar-logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Buttons section */
+  .navbar-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #f0a500;
+    border-bottom: 2px solid #f0a500;
+  }
+  
+  /* Profile icon section */
+  .navbar-profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .navbar-profile img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-buttons {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .navbar-link {
+      padding: 5px 0;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  

@@ -1,0 +1,129 @@
+/* profile.css */
+
+/* General styling for the profile page container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Profile header: Avatar and basic user info */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Avatar styling */
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 4px solid #4CAF50;
+  }
+  
+  /* Profile name and title */
+  .profile-name {
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+  }
+  
+  .profile-title {
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  /* Styling for bio section */
+  .profile-bio {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-bio h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .profile-bio p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Styling for the profile information section (contact, location, etc.) */
+  .profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .profile-info div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .profile-info p {
+    color: #777;
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  /* Social links section */
+  .profile-social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .profile-social-links a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .profile-social-links a:hover {
+    color: #4CAF50;
+  }
+  
+  /* Button for editing profile */
+  .edit-profile-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #45a049;
+  }
+  
