@@ -14,6 +14,8 @@ from app.routes.auth import authenticate
 from app.routes.profiles import profilefetch
 from app.routes.job_apply import job_apply
 from app.routes.job_applications import jobseekerprofilesfetch
+from urllib.parse import quote_plus
+from pymongo import MongoClient
 
 app = Flask(__name__)
 
@@ -23,7 +25,22 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_cred
     # Configuring MongoDB
 # app.config['MONGO_URI'] = 'mongodb://localhost:27017/jobDatabase'
 # app.config['MONGO_URI'] = 'mongodb://atlas-sql-65e1952f643d781e6dbf371c-ufpab.a.query.mongodb.net/jobDatabase?ssl=true&authSource=admin'
-app.config['MONGO_URI'] = 'mongodb+srv://test-yt:CX_NT@r3pJj#hJj@cluster0.knfynty.mongodb.net/'
+# app.config['MONGO_URI'] = 'mongodb+srv://test-yt:CX_NT@r3pJj#hJj@cluster0.knfynty.mongodb.net/'
+
+
+
+
+username = quote_plus("test-yt")  # Escapes special characters
+password = quote_plus("CX_NT@r3pJj#hJj")  # Escapes special characters
+host = "cluster0.knfynty.mongodb.net"
+db_name = "jobDatabase"
+
+uri = f"mongodb+srv://{username}:{password}@{host}/{db_name}?retryWrites=true&w=majority"
+
+app.config['MONGO_URI'] = uri
+
+# client = MongoClient(uri)
+
 
     # Initialize Extensions
 mongo.init_app(app)
