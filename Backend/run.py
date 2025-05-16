@@ -22,7 +22,8 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_cred
 
     # Configuring MongoDB
 # app.config['MONGO_URI'] = 'mongodb://localhost:27017/jobDatabase'
-app.config['MONGO_URI'] = 'mongodb://atlas-sql-65e1952f643d781e6dbf371c-ufpab.a.query.mongodb.net/jobDatabase?ssl=true&authSource=admin'
+# app.config['MONGO_URI'] = 'mongodb://atlas-sql-65e1952f643d781e6dbf371c-ufpab.a.query.mongodb.net/jobDatabase?ssl=true&authSource=admin'
+app.config['MONGO_URI'] = 'mongodb+srv://test-yt:CX_NT@r3pJj#hJj@cluster0.knfynty.mongodb.net/'
 
     # Initialize Extensions
 mongo.init_app(app)
