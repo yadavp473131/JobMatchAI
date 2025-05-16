@@ -12,7 +12,8 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/signup", {
+      // const response = await fetch("http://localhost:5000/signup", {
+      const response = await fetch("https://jobmatchai.onrender.com/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_type: role, ...formData }),
