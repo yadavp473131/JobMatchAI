@@ -18,7 +18,8 @@ const JobSearch = () => {
 
   const handleApply = async (jobId, applicantId) => {
   try {
-    const response = await fetch('http://localhost:5000/apply', {
+    // const response = await fetch('http://localhost:5000/apply', {
+    const response = await fetch('https://jobmatchai.onrender.com/apply', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +46,7 @@ const JobSearch = () => {
   
   // Fetch internal jobs
   useEffect(() => {
-    fetch("http://localhost:5000/jobs")
+    fetch("https://jobmatchai.onrender.com/jobs")
       .then((response) => {
         if (!response.ok) throw new Error("Failed to fetch jobs");
         return response.json();

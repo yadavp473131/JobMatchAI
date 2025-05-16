@@ -15,7 +15,8 @@ export const AuthProvider = ({ children }) => {
 const fetchUserFromSession = useCallback(async (key) => {
     try {
         // Example: Replace with actual API call like:
-      const response = await fetch(`http://localhost:5000/user/api/session/${key}`);
+      // const response = await fetch(`http://localhost:5000/user/api/session/${key}`);
+      const response = await fetch(`https://jobmatchai.onrender.com/user/api/session/${key}`);
       const userData = await response.json();
      
       setUser(userData);
