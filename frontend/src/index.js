@@ -7,6 +7,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import reportWebVitals from './reportWebVitals';
 import JobSearchPlatform from './components/JobSearchPlatform';
 import theme from "./components/theme";
+import { AuthProvider } from "./components/AuthProvider"; // Adjust path if needed
 // import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,11 @@ root.render(
   <React.StrictMode>
     {/* <BrowserRouter> Wrap your app with BrowserRouter */}
     <ThemeProvider theme={theme}>
+    
+    <AuthProvider>
+    {/* <App /> */}
     <JobSearchPlatform />
+    </AuthProvider>,
   </ThemeProvider>,
     {/* <App /> */}
     {/* <JobSearchPlatform/> */}

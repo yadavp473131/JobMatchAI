@@ -1,0 +1,244 @@
+/* HomePage.css */
+
+.home-container2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* padding: 2rem; */
+    background-color: #f4f6f8;
+    color: #333;
+    
+  }
+  
+  .home-header {
+    text-align: center;
+    background-color: #4b7bec;
+    color: white;
+    padding: 3rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Add to HomePage.css */
+/* .home-wrapper {
+    
+    padding-top: 80px; 
+    padding-bottom: 60px; 
+  }
+  
+
+  .home-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-header p {
+    font-size: 1.25rem;
+  }
+  
+  .features-section,
+  .how-it-works-section {
+    margin: 3rem 0;
+  }
+  
+  .features-section h2,
+  .how-it-works-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #2d3436;
+  }
+  
+  .features {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #4b7bec;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .step {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 240px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .step-icon {
+    font-size: 2rem;
+    color: #20bf6b;
+    margin-bottom: 1rem;
+  }
+  
+  .step h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #dff9fb;
+    margin-top: 3rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+   */
+   /* Fonts & Backgrounds */
+body, .home-wrapper {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: #fdfcfa;
+    color: #2d2d2d;
+    /* margin: 0px;
+    padding: 0px; */
+  }
+  
+  /* Gradient Background */
+  .gradient-background {
+    background: linear-gradient(135deg, #ff6f61, #ff9f45);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .home-header p {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  /* Section Titles */
+  .features-section h2,
+  .how-it-works-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Feature Cards */
+  .features {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .colorful-card {
+    background: #fff6e6;
+    border-left: 5px solid #ff9f45;
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .colorful-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 1rem;
+  }
+  
+  .colorful-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .colorful-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* How It Works */
+  .steps {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .vibrant-step {
+    background: #e9f7f9;
+    border-left: 5px solid #1abc9c;
+    padding: 1.5rem;
+    border-radius: 16px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+  
+  .vibrant-step:hover {
+    transform: translateY(-6px);
+  }
+  
+  .step-icon {
+    font-size: 2rem;
+    color: #1abc9c;
+    margin-bottom: 1rem;
+  }
+  
+  .vibrant-step h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  
+  .vibrant-step p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  /* Padding offset for fixed navbar */
+  .home-wrapper {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+  

@@ -8,9 +8,11 @@
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #f57ccc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 40px;
   }
   
   /* Profile header: Avatar and basic user info */

@@ -4,6 +4,8 @@ import "./JobPosting.css";
 const JobPosting = () => {
   const jobCategories = ["Engineering", "Marketing", "Finance", "Design", "IT Support"];
   const jobTypes = ["Full-Time", "Part-Time", "Contract", "Internship"];
+  const id = localStorage.getItem("userId");
+  
   const [formData, setFormData] = useState({
     title: "",
     category: jobCategories[0],
@@ -14,14 +16,16 @@ const JobPosting = () => {
     work_details: "",
     job_type: jobTypes[0],
     timing: "",
+    job_posters_id:id,
   });
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
+    console.log(formData);
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:5000/post-job", {
@@ -38,10 +42,12 @@ const JobPosting = () => {
           description: "",
           eligibility: "",
           requirements: "",
+          location: "",
           salary: "",
           work_details: "",
           job_type: jobTypes[0],
           timing: "",
+          job_posters_id:"",
         });
       } else {
         alert("Error posting job. Please try again.");
@@ -91,6 +97,14 @@ const JobPosting = () => {
           onChange={handleChange}
           required
         ></textarea>
+        <input
+          type="text"
+          name="location"
+          placeholder="Location"
+          value={formData.location}
+          onChange={handleChange}
+          required
+        />
         <input
           type="text"
           name="salary"

@@ -1,16 +1,24 @@
 /* Navbar.css */
 
 /* General styles for the navbar container */
-.navbar {
+ /* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #3d20ce;
     padding: 10px 20px;
-    color: #fff;
+    color: #e8bf0d;
     font-family: Arial, sans-serif;
-    box-shadow: 0 2px 5px rgba(62, 4, 222, 0.1);
-  }
+    box-shadow: 0 2px 5px rgba(62, 4, 222, 0.1); */
+    /* position: relative; */
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+     z-index: 1000; */ /*Make sure it's above all other content */
+    /* background-color: #ffffff; Or your preferred color  */
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);*/
+  /* }  */
   
   /* Logo section */
   .navbar-logo img {
@@ -24,13 +32,13 @@
   }
   
   /* Buttons section */
-  .navbar-buttons {
+   /* .navbar-buttons {
     display: flex;
     gap: 20px;
   }
   
   .navbar-link {
-    color: #fff;
+    color: #3f07c3;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s, border-bottom 0.3s;
@@ -39,10 +47,10 @@
   .navbar-link:hover {
     color: #f0a500;
     border-bottom: 2px solid #f0a500;
-  }
+  } */
   
   /* Profile icon section */
-  .navbar-profile img {
+   .navbar-profile img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -53,10 +61,10 @@
   .navbar-profile img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  }
+  } 
   
   /* Responsive design for smaller screens */
-  @media (max-width: 768px) {
+   /* @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
       align-items: flex-start;
@@ -75,4 +83,40 @@
       text-align: left;
     }
   }
-  
+    */
+
+  .navbar {
+  background-color: #5e9dea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f9f8f8;
+  text-decoration: none;
+  text-align: left;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item a {
+  color: #eef0f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-item a:hover {
+  color: #2563eb;
+}
