@@ -21,7 +21,7 @@ app = Flask(__name__)
 
     # Enable CORS
 # CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
-CORS(app, resources={r"/*": {"origins": "https://jobmatchai.onrender.com"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "https://jobmatchai-1.onrender.com"}}, supports_credentials=True)
 
     # Configuring MongoDB
 # app.config['MONGO_URI'] = 'mongodb://localhost:27017/jobDatabase'
