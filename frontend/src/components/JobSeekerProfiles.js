@@ -15,7 +15,7 @@ const JobSeekerProfiles = () => {
     const fetchJobSeekers = async () => {
       try {
 
-        const response = await axios.get('http://localhost:5000/jobseekersprofiles');
+        const response = await axios.get('https://jobmatchai.onrender.com/jobseekersprofiles');
         setJobSeekers(response.data);
       } catch (error) {
         console.error('Error fetching job seekers:', error);
