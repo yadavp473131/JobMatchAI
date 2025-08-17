@@ -11,7 +11,6 @@ const Admin = () => {
     const fetchUsers = async () => {
       try {
         setLoading(true);
-
         const [seekersRes, postersRes] = await Promise.all([
           axios.get("/api/users/jobseekers"),
           axios.get("/api/users/jobposters"),

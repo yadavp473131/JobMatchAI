@@ -4,6 +4,7 @@ import profileIcon from "./Images/profileicon.png"; // Import profile icon image
 import React from "react";
 import "./Navbar.css"; // Import the styles
 
+
 const Navbar = ({ role }) => {
   const navigate = useNavigate();
   const navConfig = {

@@ -92,6 +92,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: flex;
 }
 
 .navbar-brand {
@@ -119,4 +120,12 @@
 
 .navbar-item a:hover {
   color: #2563eb;
+}
+@media only screen and (max-width:500px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .navbar-menu{
+    margin: 20px 0;
+  }
 }

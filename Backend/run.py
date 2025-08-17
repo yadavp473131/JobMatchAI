@@ -20,8 +20,9 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
     # Enable CORS
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
 # CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
-CORS(app, resources={r"/*": {"origins": "https://jobmatchai-1.onrender.com"}}, supports_credentials=True)
+# CORS(app, resources={r"/*": {"origins": "https://jobmatchai-1.onrender.com"}}, supports_credentials=True)
 
     # Configuring MongoDB
 # app.config['MONGO_URI'] = 'mongodb://localhost:27017/jobDatabase'
@@ -34,10 +35,10 @@ CORS(app, resources={r"/*": {"origins": "https://jobmatchai-1.onrender.com"}}, s
 username = quote_plus("test-yt")  # Escapes special characters
 password = quote_plus("CX_NT@r3pJj#hJj")  # Escapes special characters
 host = "cluster0.knfynty.mongodb.net"
-db_name = "jobDatabase"
+db_name = "ShoppingDatabase"
 
 uri = f"mongodb+srv://{username}:{password}@{host}/{db_name}?retryWrites=true&w=majority"
-
+print(uri)
 app.config['MONGO_URI'] = uri
 
 # client = MongoClient(uri)
@@ -64,6 +65,6 @@ app.register_blueprint(jobseekerprofilesfetch)
     
 #     print("app has run")
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port= 5000)
+    app.run(host="localhost", port= 5000)
 #     main()
 

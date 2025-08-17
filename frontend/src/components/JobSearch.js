@@ -5,8 +5,21 @@ import { useNavigate } from "react-router-dom";
 const JobSearch = () => {
   const [jobs, setJobs] = useState([]);
   const [filteredJobs, setFilteredJobs] = useState([]);
-  const [selectedJob, setSelectedJob] = useState(null);
-
+  // const [selectedJob, setSelectedJob] = useState(null);
+  const [selectedJob, setSelectedJob] = useState({
+      _id: "1",
+      title: "Frontend Developer",
+      category: "Software",
+      location: "Bengaluru",
+      job_type: "Full-Time",
+      description: "Build and maintain UI components using React.",
+      eligibility: "B.Tech in Computer Science or related field.",
+      requirements: "Proficiency in React, CSS, JavaScript.",
+      salary: "₹6-10 LPA",
+      work_details: "Work from office",
+      timing: "Day Shift",
+    });
+  
   const [filters, setFilters] = useState({
     location: "",
     category: "",
@@ -15,6 +28,61 @@ const JobSearch = () => {
 
   const navigate = useNavigate();
 
+  const defaultJobs = [
+    {
+      _id: "1",
+      title: "Frontend Developer",
+      category: "Software",
+      location: "Bengaluru",
+      job_type: "Full-Time",
+      description: "Build and maintain UI components using React.",
+      eligibility: "B.Tech in Computer Science or related field.",
+      requirements: "Proficiency in React, CSS, JavaScript.",
+      salary: "₹6-10 LPA",
+      work_details: "Work from office",
+      timing: "Day Shift",
+    },
+    {
+      _id: "2",
+      title: "Backend Developer",
+      category: "Software",
+      location: "Hyderabad",
+      job_type: "Full-Time",
+      description: "Develop scalable APIs with Node.js and Express.",
+      eligibility: "Strong knowledge of backend systems.",
+      requirements: "Node.js, MongoDB, REST APIs.",
+      salary: "₹8-12 LPA",
+      work_details: "Hybrid",
+      timing: "Day Shift",
+    },
+    {
+      _id: "3",
+      title: "Data Analyst",
+      category: "Analytics",
+      location: "Remote",
+      job_type: "Part-Time",
+      description: "Analyze datasets and prepare reports.",
+      eligibility: "Graduate with analytical background.",
+      requirements: "SQL, Excel, Python (preferred).",
+      salary: "₹4-6 LPA",
+      work_details: "Remote",
+      timing: "Flexible",
+    },
+    {
+      _id: "4",
+      title: "HR Manager",
+      category: "Human Resources",
+      location: "Delhi",
+      job_type: "Full-Time",
+      description: "Manage recruitment and employee relations.",
+      eligibility: "MBA in HR or related field.",
+      requirements: "Strong communication and organizational skills.",
+      salary: "₹7-9 LPA",
+      work_details: "Work from office",
+      timing: "Day Shift",
+      
+    },
+  ];
 
   const handleApply = async (jobId, applicantId) => {
   try {
@@ -45,38 +113,38 @@ const JobSearch = () => {
 
   
   // Fetch internal jobs
-  useEffect(() => {
-    fetch("https://jobmatchai.onrender.com/jobs")
-      .then((response) => {
-        if (!response.ok) throw new Error("Failed to fetch jobs");
-        return response.json();
-      })
-      .then((data) => {
-        setJobs(data);
-        setFilteredJobs(data);
-      })
-      .catch((error) => console.error("Error fetching jobs:", error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://jobmatchai.onrender.com/jobs")
+  //     .then((response) => {
+  //       if (!response.ok) throw new Error("Failed to fetch jobs");
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setJobs(data);
+  //       setFilteredJobs(data);
+  //     })
+  //     .catch((error) => console.error("Error fetching jobs:", error));
+  // }, []);
 
   // Apply filters
-  useEffect(() => {
-    const { location, category, jobType } = filters;
+  // useEffect(() => {
+  //   const { location, category, jobType } = filters;
   
-    const matchFilter = (job) => {
-      const matchesLocation = location ? job.location?.toLowerCase().includes(location.toLowerCase()) : true;
-      const matchesCategory = category ? job.category?.toLowerCase().includes(category.toLowerCase()) : true;
-      const matchesJobType = jobType ? job.job_type?.toLowerCase().includes(jobType.toLowerCase()) : true;
-      return matchesLocation && matchesCategory && matchesJobType;
-    };
+  //   const matchFilter = (job) => {
+  //     const matchesLocation = location ? job.location?.toLowerCase().includes(location.toLowerCase()) : true;
+  //     const matchesCategory = category ? job.category?.toLowerCase().includes(category.toLowerCase()) : true;
+  //     const matchesJobType = jobType ? job.job_type?.toLowerCase().includes(jobType.toLowerCase()) : true;
+  //     return matchesLocation && matchesCategory && matchesJobType;
+  //   };
 
-    const filtered = jobs.filter(matchFilter);
-    setFilteredJobs(filtered);
+  //   const filtered = jobs.filter(matchFilter);
+  //   setFilteredJobs(filtered);
 
-    // Auto-clear selected job if it no longer matches
-    if (selectedJob && !filtered.find(j => j._id === selectedJob._id)) {
-      setSelectedJob(null);
-    }
-  }, [filters, jobs, selectedJob]);
+  //   // Auto-clear selected job if it no longer matches
+  //   if (selectedJob && !filtered.find(j => j._id === selectedJob._id)) {
+  //     setSelectedJob(null);
+  //   }
+  // }, [filters, jobs, selectedJob]);
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -120,8 +188,10 @@ const JobSearch = () => {
         {/* Left Column: Job List */}
         <div className="job-list-column">
           <h2>Available Jobs</h2>
-          {filteredJobs.length > 0 ? (
-            filteredJobs.map((job) => (
+          {/* {filteredJobs.length > 0 ? ( */}
+          {defaultJobs.length > 0 ? (
+            // filteredJobs.map((job) => (
+            defaultJobs.map((job) => (
               <div
                 key={job._id}
                 className={`job-card ${selectedJob?._id === job._id ? "selected" : ""}`}

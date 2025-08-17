@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { FaSearch, FaUserTie, FaRegLightbulb } from "react-icons/fa";
 import { MdHowToReg } from "react-icons/md";
 
+
 const features = [
   {
     icon: <FaSearch className="feature-icon" />,

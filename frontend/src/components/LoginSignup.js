@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./home.css";
+import "./LoginSignup.css";
 
-const Home = () => {
+const LoginSignup = () => {
   return (
     <div className="home-container">
       <h1>Welcome to Job Search Platform</h1>
@@ -19,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default LoginSignup;
